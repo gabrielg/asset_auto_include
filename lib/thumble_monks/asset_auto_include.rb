@@ -9,7 +9,7 @@ module ThumbleMonks
     AssetTagHelper = lambda do
       mattr_accessor :asset_autoinclude_options
       self.asset_autoinclude_options = {}
-      asset_autoinclude_options[:asset_glob_patterns] = %w[controller %s %s-* *-%s *-%s-*]
+      asset_autoinclude_options[:asset_glob_patterns] = %w[controller %s-* *-%s *-%s-* %s]
       asset_autoinclude_options[:autoinclude_subdir] = "app"
       asset_autoinclude_options[:js_autoinclude_full_path] = Pathname.new("#{RAILS_ROOT}/public/javascripts/#{asset_autoinclude_options[:autoinclude_subdir]}")
       asset_autoinclude_options[:css_autoinclude_full_path] = Pathname.new("#{RAILS_ROOT}/public/stylesheets/#{asset_autoinclude_options[:autoinclude_subdir]}")
